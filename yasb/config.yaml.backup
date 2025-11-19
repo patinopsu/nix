@@ -221,7 +221,6 @@ widgets:
     options:
       label: "{icon} {level}"
       label_alt: "{volume}"
-      mute_text: " Muted"
       volume_icons:
         - "\ueee8"
         - "\uf026"
@@ -248,7 +247,7 @@ widgets:
         on_left: "toggle_menu"
         on_middle: "exec cmd.exe /c start ms-settings:network"
         on_right: "toggle_label"
-      ethernet_label: "{wifi_icon}  ETH/VPN"
+      ethernet_label: "{wifi_icon}  ETH"
       ethernet_label_alt: "{wifi_icon} {ip_addr}"
       ethernet_icon: "\ueba9"
       get_exact_wifi_strength: true

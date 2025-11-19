@@ -1,14 +1,9 @@
 general:
-  startup_commands: ['shell-exec yasb']
-  shutdown_commands: ['shell-exec taskkill /IM yasb.exe /F']
-
   toggle_workspace_on_refocus: false
 
-  cursor_jump:
-    enabled: true
-    trigger: 'monitor_focus'
-
   hide_method: 'cloak'
+  show_all_in_taskbar: false
+
 gaps:
   scale_with_dpi: true
   inner_gap: '10px'
@@ -41,7 +36,7 @@ window_behavior:
   state_defaults:
     floating:
       centered: false
-      shown_on_top: false
+      shown_on_top: true
 
 workspaces:
   - name: '1'
@@ -58,17 +53,19 @@ window_rules:
   - commands: ['set-floating']
     match:
       - window_process: { equals: 'explorer' }
-      - window_process: { equals: 'SnippingTool.exe' }
-      - window_process: { equals: 'PowerToys.Peek.UI.exe' }
+      - window_process: { equals: 'SnippingTool' }
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
+      - window_process: { regex: 'QuickLook' }
       - window_process: { equals: 'PowerToys' }
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
-      - window_process: { equals: 'PowerToys.Peek.UI.exe' }
-  
+      - window_process: { equals: 'PowerToys' }
+        window_title: { regex: '.*? - Peek' }
+      - window_process: { regex: 'Taskmgr'}
+
   - commands: ['ignore']
     match:
-      - window_process: { equals: 'yasb' }
+      - window_process: { regex: 'yasb' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
       - window_process: { equals: 'EXCEL' }
