@@ -145,7 +145,6 @@ widgets:
         hide_duplicates: false
         hide_floating: false
       animation: true
-
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
     options:
@@ -158,9 +157,11 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 14
-      max_length: 34
+      max_length: 40
       max_length_ellipsis: "..."
       monitor_exclusive: true
+      callbacks:
+        on_left: "do_nothing"
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
