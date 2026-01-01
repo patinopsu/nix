@@ -15,6 +15,7 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   environment.etc = {
     "1password/custom_allowed_browsers" = {
       text = ''
@@ -46,12 +47,9 @@
     mesa-demos
     vulkan-tools
   ];
+
   programs.nix-ld.enable = true;
-  #programs.nix-ld.libraries = with pkgs; [
-  #
-  #];
   programs.gpu-screen-recorder.enable = true;
-  environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   programs._1password.enable = true;
   programs._1password-gui = {
     enable = true;
