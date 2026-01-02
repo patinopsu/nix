@@ -22,4 +22,14 @@
       ];
     };
   };
+  security = {
+    sudo = {
+      extraConfig = ''
+        Defaults pwfeedback
+        Defaults insults
+        Defaults passprompt="🔒 password for %p: "
+        Defaults badpass_message="❌ Incorrect Passowrd. Please try again."
+      '';
+    };
+  };
 }

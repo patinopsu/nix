@@ -14,14 +14,24 @@ in
   #services.displayManager = {};
   programs.niri.enable = true;
   programs.zsh.enable = true;
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      hyprland = {
+        prettyName = "Hyprland";
+        comment = "Hyprland compositor managed by UWSM";
+        binPath = "/run/current-system/sw/bin/Hyprland";
+      };
+    };
+  };
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    withUWSM = true;
     xwayland.enable = true;
   };
   environment.systemPackages = with pkgs; [
-    hyprpolkitagent
+    polkit_gnome
+    libappindicator
     kdePackages.kirigami
     libsForQt5.qt5.qtgraphicaleffects
     desktop-file-utils
@@ -43,6 +53,21 @@ in
     kdePackages.ark
     haruna
   ];
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      serviceConfig = {
+          Type = "simple";
+          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+          Restart = "on-failure";
+          RestartSec = 1;
+          TimeoutStopSec = 10;
+        };
+    };
+  };
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -75,6 +100,7 @@ in
   };
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
+    XDG_CURRENT_DESKTOP = "hyprland";
     TERMINAL= "kitty";
     HYPR_PLUGIN_DIR = hypr-plugin-dir;
   };
