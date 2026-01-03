@@ -79,17 +79,20 @@
   xdg = {
     portal = {
       enable = true;
+      extraPortals = with pkgs; [
+        kdePackages.xdg-desktop-portal-kde
+        xdg-desktop-protal-gnome
+      ];
       config = {
         hyprland = lib.mkForce {
           default = [
             "kde"
-            "hyprland"
+            "gnome"
           ];
+          "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ]; 
+          "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
         };
       };
-      extraPortals = with pkgs; [
-        kdePackages.xdg-desktop-portal-kde
-      ];
     };
   };
 }
