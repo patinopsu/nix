@@ -81,7 +81,7 @@
       enable = true;
       extraPortals = with pkgs; [
         kdePackages.xdg-desktop-portal-kde
-        xdg-desktop-protal-gnome
+        xdg-desktop-portal-gnome
       ];
       config = {
         hyprland = lib.mkForce {
