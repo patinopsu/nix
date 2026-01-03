@@ -21,7 +21,7 @@
 
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "noctalia-shell ipc call launcher toggle";
+      "$menu" = "fuzzel";
       "$mainMod" = "SUPER";
 
       "exec-once" = [
