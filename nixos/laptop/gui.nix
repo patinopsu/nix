@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     polkit_gnome
     kdePackages.dolphin
+    kdePackages.ark
     kdePackages.xdg-desktop-portal-kde
   ];
   
