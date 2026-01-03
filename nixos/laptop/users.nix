@@ -18,6 +18,7 @@
         ./home/zsh.nix
         ./home/fuzzel.nix
         ./home/kitty.nix
+        ./home/waybar.nix
         ./home/hyprland.nix
         ./home/hypridle.nix
         ./home/hyprlock.nix
