@@ -188,8 +188,7 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
-      
-      # Window Rules
+
       windowrule = [
         "match:class org.freedesktop.impl.portal.desktop.kde, float on"
         "match:class udiskie, float on"
