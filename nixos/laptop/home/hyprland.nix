@@ -21,12 +21,11 @@
 
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "fuzzel";
+      "$menu" = "noctalia-shell ipc call launcher toggle";
       "$mainMod" = "SUPER";
 
       "exec-once" = [
         "noctalia-shell"
-        "~/scripts/monitor-handle.sh init"
       ];
 
       # Env
@@ -109,6 +108,7 @@
 
       input = {
         kb_layout = "us,th";
+        kb_options = "grp:win_space_toggle";
         follow_mouse = 0;
         sensitivity = 0;
         accel_profile = "flat";
@@ -195,8 +195,6 @@
       windowrule = [
         "match:class org.freedesktop.impl.portal.desktop.kde, float on"
         "match:class udiskie, float on"
-        "match:class org.freedesktop.impl.portal.desktop.kde, float on"
-        "match:class org.freedesktop.impl.portal.desktop.kde, float on"
       ];
     };
     plugins = [

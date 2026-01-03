@@ -1,3 +1,5 @@
+{ inputs, config, ... }:
+
 {
   programs.noctalia-shell = {
     enable = true;
@@ -27,7 +29,6 @@
       };
 
       bar = {
-        capsuleOpacity = 1;
         density = "default";
         exclusive = true;
         floating = true;
@@ -128,9 +129,6 @@
               hideWhenZero = false;
               id = "NotificationHistory";
               showUnreadBadge = true;
-            }
-            {
-              id = "PowerProfile";
             }
             {
               hideMode = "alwaysExpanded";
@@ -263,7 +261,6 @@
 
       dock = {
         animationSpeed = 1;
-        backgroundOpacity = 0.98;
         colorizeIcons = false;
         deadOpacity = 0.44;
         displayMode = "always_visible";
@@ -339,7 +336,6 @@
       };
 
       notifications = {
-        backgroundOpacity = 1;
         criticalUrgencyDuration = 15;
         enableKeyboardLayoutToast = true;
         enabled = true;
@@ -362,7 +358,6 @@
 
       osd = {
         autoHideMs = 2000;
-        backgroundOpacity = 1;
         enabled = true;
         enabledTypes = [0 1 2 4 3];
         location = "bottom";
@@ -484,11 +479,9 @@
       ui = {
         bluetoothDetailsViewMode = "grid";
         bluetoothHideUnnamedDevices = false;
-        fontDefault = "Noto Sans";
+        fontDefault = "${config.stylix.fonts.sansSerif.name}";
         fontDefaultScale = 1;
-        fontFixed = "FiraCode Nerd Font Mono";
         fontFixedScale = 1;
-        panelBackgroundOpacity = 0.85;
         panelsAttachedToBar = true;
         settingsPanelMode = "attached";
         tooltipsEnabled = true;
@@ -524,5 +517,29 @@
         wallhavenSorting = "random";
       };
     };
+  };
+  stylix.targets.noctalia-shell.enable = true;
+  home.file.".config/noctalia/plugins" = {
+      source = inputs.noctalia-plugins;
+  };
+  home.file.".config/noctalia/plugins.json" = {
+    text = ''
+      {
+          "sources": [
+              {
+                  "enabled": true,
+                  "name": "Official Noctalia Plugins",
+                  "url": "https://github.com/noctalia-dev/noctalia-plugins"
+              }
+          ],
+          "states": {
+              "privacy-indicator": {
+                  "enabled": true,
+                  "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+              }
+          },
+          "version": 1
+      }
+    '';
   };
 }
