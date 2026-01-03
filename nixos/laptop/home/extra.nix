@@ -9,7 +9,6 @@
     hypridle.enable = true;
     udiskie.enable = true;
   };
-  home.file.".config/kitty".source = ../../../kitty;
 
   home.packages = with pkgs; [
     bat

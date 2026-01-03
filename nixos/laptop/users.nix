@@ -17,6 +17,7 @@
         ./home/ssh.nix
         ./home/zsh.nix
         ./home/fuzzel.nix
+        ./home/kitty.nix
         ./home/extra.nix
         ./home/hyprland.nix
       ];
