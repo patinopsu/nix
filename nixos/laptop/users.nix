@@ -20,6 +20,7 @@
         ./home/kitty.nix
         ./home/hyprland.nix
         ./home/hypridle.nix
+        ./home/hyprlock.nix
         ./home/extra.nix
       ];
     };

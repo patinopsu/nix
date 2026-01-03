@@ -138,6 +138,9 @@
         "$mainMod, V, exec, noctalia-shell ipc call launcher clipboard"
         "$mainMod, E, exec, $fileManager"
         "Alt, Space, exec, $menu"
+
+        "$mainMod, L, exec, hyprlock"
+
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
