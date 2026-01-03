@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.zsh = {
     enable = true;
@@ -24,4 +26,7 @@
         garbagecollect = "sudo nix-collect-garbage -d && nixupdate";
       };
     };
+  home.sessionVariables = {
+    ZSH_COMPDUMP = "${config.home.homeDirectory}/.cache/zsh/.zcompdump";
+  };
 }
