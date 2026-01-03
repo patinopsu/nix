@@ -1,58 +1,54 @@
 { config, lib, pkgs, inputs, ... }:
 
-with lib; let
-  hyprPluginPkgs = inputs.hyprland-plugins.packages.${pkgs.system};
-  hypr-plugin-dir = pkgs.symlinkJoin {
-    name = "hyrpland-plugins";
-    paths = with hyprPluginPkgs; [
-      hyprscrolling
-    ];
-  };
-in
-
 {
-  #services.displayManager = {};
-  programs.niri.enable = true;
-  programs.zsh.enable = true;
-  programs.uwsm = {
-    enable = true;
-    waylandCompositors = {
-      hyprland = {
-        prettyName = "Hyprland";
-        comment = "Hyprland compositor managed by UWSM";
-        binPath = "/run/current-system/sw/bin/Hyprland";
+  stylix.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+  stylix.image = /home/patin/Pictures/walls/anime_skull.png;
+  stylix.polarity = "dark";
+
+  stylix = {
+    fonts = {
+      serif = {
+        name = "Noto Serif";
+      };
+
+      sansSerif = {
+        name = "Noto Sans";
+      };
+
+      monospace = {
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+
+      emoji = {
+        name = "Noto Color Emoji";
+      };
+      sizes = {
+        desktop = 10;
+        applications = 11;
       };
     };
+    icons = {
+      enable = true;
+      package = pkgs.papirus-icon-theme;
+      dark = "Papirus-Dark";
+      light = "Papirus-Light";
+    };
   };
+  programs.zsh.enable = true;
+
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     xwayland.enable = true;
+    withUWSM = true;
   };
   environment.systemPackages = with pkgs; [
     polkit_gnome
-    libappindicator
-    kdePackages.kirigami
-    libsForQt5.qt5.qtgraphicaleffects
-    desktop-file-utils
-    kdePackages.gwenview
-    kdePackages.plasma-workspace
     kdePackages.dolphin
-    kdePackages.kio
-    kdePackages.kdf
-    kdePackages.kio-fuse
-    kdePackages.kio-extras
-    kdePackages.kio-admin
-    kdePackages.qtwayland
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.breeze-icons
-    kdePackages.qtsvg
-    kdePackages.kservice
-    shared-mime-info
-    kdePackages.kate
-    kdePackages.ark
-    haruna
+    kdePackages.xdg-desktop-portal-kde
   ];
+  
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -68,40 +64,32 @@ in
         };
     };
   };
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  qt = {
-    enable = true;
-    style = "breeze";
-    platformTheme = "qt5ct";
-  };
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ 
-      pkgs.kdePackages.xdg-desktop-portal-kde
-    ];
-    config = {
-      common = {
-        default = [ "gtk" ];
-      };
-    hyprland = {
-      default =  lib.mkForce [
-        "kde"
-        "hyprland"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
-        "org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
-      };
-    };
-  };
+
   environment.sessionVariables = {
-    XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "hyprland";
     TERMINAL= "kitty";
-    HYPR_PLUGIN_DIR = hypr-plugin-dir;
+  };
+
+  xdg = {
+    portal = {
+      enable = true;
+      config = {
+        hyprland = lib.mkForce {
+          default = [
+            "kde"
+            "hyprland"
+          ];
+        };
+      };
+      extraPortals = with pkgs; [
+        kdePackages.xdg-desktop-portal-kde
+      ];
+    };
   };
 }

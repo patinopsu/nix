@@ -6,10 +6,7 @@
     extraGroups = ["wheel" "networkmanager" "docker" "i2c"];
     description = "Patin Muangjan";
     shell = pkgs.zsh;
-    packages = with pkgs; [
-        alacritty
-        vscode
-    ];
+    #packages = with pkgs; [];
   };
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -17,8 +14,8 @@
     useUserPackages = true;
     users.patin = {
       imports = [
-        inputs.noctalia.homeModules.default
-        ./home.nix
+        ./home/main.nix
+        ./home/hyprland.nix
       ];
     };
   };
@@ -27,8 +24,8 @@
       extraConfig = ''
         Defaults pwfeedback
         Defaults insults
-        Defaults passprompt="🔒 password for %p: "
-        Defaults badpass_message="❌ Incorrect Passowrd. Please try again."
+        Defaults passprompt="🔒password for %p: "
+        Defaults badpass_message="❌Incorrect Passowrd. Please try again."
       '';
     };
   };

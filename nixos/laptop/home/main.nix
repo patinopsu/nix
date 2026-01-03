@@ -4,18 +4,10 @@
   home.username = "patin";
   home.homeDirectory = "/home/patin";
 
+
   services = {
     hypridle.enable = true;
     udiskie.enable = true;
-    flameshot = {
-      enable = true;
-      settings = {
-        General = {
-          useGrimAdapter = true;
-          disabledGrimWarning = true;
-        };
-      };
-    };
   };
   programs = {
     git = {
@@ -62,46 +54,27 @@
           "git"
         ];
       };
+      initContent = ''
+        if uwsm check may-start; then
+          echo Starting Hyprland
+          exec uwsm start default
+        fi  
+      '';
       shellAliases = {
         nixupdate = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
+        screenfix = "~/scripts/monitor-handle.sh init";
+	      hyprinit = "uwsm start default";
+        garbagecollect = "sudo nix-collect-garbage -d && nixupdate";
       };
     };
   };
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Breeze-Dark";
-      package = pkgs.kdePackages.breeze-gtk;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme=1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme=1;
-    };
-    font.name = "Noto Sans";
-  };
-  home.file.".config/kitty".source = ../../kitty;
-  home.file.".config/hypr".source = ../../hypr;
-  home.file."scripts".source = ../../scripts;
-  home.file.".config/noctalia" = {
-      source = ../../noctalia;
-      recursive = true;
-  };
-  home.file.".config/noctalia/plugins" = {
-      source = inputs.noctalia-plugins;
-      recursive = true;
-  };
+  home.file.".config/kitty".source = ../../../kitty;
+  home.file."scripts".source = ../../../scripts;
   home.packages = with pkgs; [
-    google-chrome
-    neovim
     bat
-    xwayland-satellite
+    neovim
     s-tui
+    lazygit
     pavucontrol
     ddcutil
     fastfetch
@@ -109,8 +82,8 @@
     kitty
     libnotify
     scrcpy
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    lazygit
+    vscode
+    google-chrome
   ];
   home.sessionVariables = {
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";

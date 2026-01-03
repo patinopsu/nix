@@ -1,30 +1,42 @@
 { config, lib, pkgs, ... }:
 
 {
-  boot.loader.efi = {
-    canTouchEfiVariables = true;
-    efiSysMountPoint = "/boot/efi";
-  };
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-    ];
-  };
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD";
+  boot = {
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
+      systemd-boot = lib.mkForce {
+        enable = false;
+      };
+    };
+    lanzaboote = lib.mkForce {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
+    };
+    plymouth = {
+      enable = true;
+    };
+    initrd = {
+      systemd = {
+        enable = true;
+      };
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  hardware.i2c.enable = true;
-  hardware.enableAllFirmware = true;
-
-  boot.lanzaboote = lib.mkForce {
-    enable = true;
-    pkiBundle = "/var/lib/sbctl";
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+      ];
+    };
+    i2c = {
+      enable = true;
+    };
+    enableAllFirmware = true;
   };
-  boot.loader.systemd-boot.enable = lib.mkForce false;
-  boot.initrd.systemd.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.plymouth.enable = true;
 }
