@@ -12,10 +12,7 @@
         "eDP-1, highres, auto, 1"
       ];
 
-      # Lid Switch
       bindl = [
-        #",switch:on:Lid Switch,exec,~/scripts/monitor-handle.sh close"
-        #",switch:off:Lid Switch,exec,~/scripts/monitor-handle.sh open"
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPause, exec, playerctl play-pause"
         ", XF86AudioPlay, exec, playerctl play-pause"
@@ -108,10 +105,6 @@
           column_width = 0.7;
           fullscreen_on_one_column = false;
         };
-      };
-
-      master = {
-        new_status = "master";
       };
 
       input = {

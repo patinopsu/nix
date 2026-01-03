@@ -6,7 +6,6 @@
     extraGroups = ["wheel" "networkmanager" "docker" "i2c"];
     description = "Patin Muangjan";
     shell = pkgs.zsh;
-    #packages = with pkgs; [];
   };
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -14,7 +13,10 @@
     useUserPackages = true;
     users.patin = {
       imports = [
-        ./home/main.nix
+        ./home/git.nix
+        ./home/ssh.nix
+        ./home/zsh.nix
+        ./home/extra.nix
         ./home/hyprland.nix
       ];
     };
