@@ -18,11 +18,12 @@
         ./home/zsh.nix
         ./home/fuzzel.nix
         ./home/kitty.nix
-        ./home/waybar.nix
+        ./home/noctalia.nix
         ./home/hyprland.nix
         ./home/hypridle.nix
         ./home/hyprlock.nix
         ./home/extra.nix
+        inputs.noctalia.homeModules.default
       ];
     };
   };
