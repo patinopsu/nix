@@ -721,6 +721,42 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767461490,
+        "narHash": "sha256-X8GbRauDa4Tw/+gkymLe4V1+ZGy/b4IHuuhCY/OiYcQ=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "3c80d87beeecaa6900573ed2435b90378b60d02d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "type": "github"
+      }
+    },
+    "noctalia-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767449574,
+        "narHash": "sha256-Rkd6oWIWNIxlWvWv6vFhY7wqEN8DrVjWqpB5h6bbVLQ=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-plugins",
+        "rev": "cc645fd4ac872bed0a0c58245fb0a30d1f8917d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-plugins",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -800,6 +836,8 @@
         "lanzaboote": "lanzaboote",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
+        "noctalia": "noctalia",
+        "noctalia-plugins": "noctalia-plugins",
         "stylix": "stylix"
       }
     },
