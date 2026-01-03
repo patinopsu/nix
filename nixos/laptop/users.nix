@@ -16,6 +16,7 @@
         ./home/git.nix
         ./home/ssh.nix
         ./home/zsh.nix
+        ./home/fuzzel.nix
         ./home/extra.nix
         ./home/hyprland.nix
       ];

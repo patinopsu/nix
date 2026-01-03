@@ -81,16 +81,20 @@
       enable = true;
       extraPortals = with pkgs; [
         kdePackages.xdg-desktop-portal-kde
-        xdg-desktop-portal-gnome
       ];
       config = {
+        common = {
+          default = [
+            "gtk"
+          ];
+        };
         hyprland = lib.mkForce {
           default = [
             "kde"
-            "gnome"
+            "hyprland"
           ];
-          "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ]; 
-          "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+          "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ]; 
+          "org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
         };
       };
     };
