@@ -159,7 +159,7 @@
       };
 
       brightness = {
-        brightnessStep = 1;
+        brightnessStep = 5;
         enableDdcSupport = true;
         enforceMinimum = true;
       };
