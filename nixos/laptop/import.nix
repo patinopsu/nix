@@ -11,7 +11,7 @@
       ./misc.nix
       ./power.nix
       ./systemd.nix
-      ./audio.nixc
+      ./audio.nix
       /etc/nixos/hardware.nix
     ];
 }
