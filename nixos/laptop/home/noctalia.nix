@@ -87,7 +87,7 @@
               drawerEnabled = true;
               hidePassive = false;
               id = "Tray";
-              pinned = ["Flameshot" "Discord"];
+              #pinned = ["Flameshot" "Discord"];
             }
           ];
           right = [
@@ -104,10 +104,6 @@
             {
               displayMode = "onhover";
               id = "Volume";
-            }
-            {
-              displayMode = "onhover";
-              id = "Bluetooth";
             }
             {
               displayMode = "forceOpen";
