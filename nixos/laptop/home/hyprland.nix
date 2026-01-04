@@ -12,13 +12,6 @@
         "eDP-1, highres, auto, 1"
       ];
 
-      bindl = [
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPause, exec, playerctl play-pause"
-        ", XF86AudioPlay, exec, playerctl play-pause"
-        ", XF86AudioPrev, exec, playerctl previous"
-      ];
-
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "noctalia-shell ipc call launcher toggle";
@@ -40,7 +33,7 @@
         gaps_out = 20;
         border_size = 2;
         resize_on_border = false;
-        allow_tearing = false;
+        allow_tearing = true;
         layout = "scrolling";
       };
 
@@ -67,6 +60,7 @@
       
       misc = {
         disable_watchdog_warning = true;
+        "vfr" = "true";
       };
 
       animations = {
@@ -179,13 +173,19 @@
         "$mainMod SHIFT, right, layoutmsg, movewindowto l"
       ];
 
-      bindel = [
+      bindl = [
+        ", XF86AudioNext, exec, noctalia-shell ipc call media next"
+        ", XF86AudioPause, exec, noctalia-shell ipc call media pause"
+        ", XF86AudioPlay, exec, noctalia-shell ipc call media play"
+        ", XF86AudioPrev, exec, noctalia-shell ipc call media previous"
+
         ",XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
         ",XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
         ",XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
         ",XF86AudioMicMute, exec, noctalia-shell ipc call volume muteInput"
         ",XF86MonBrightnessUp, exec, noctalia-shell ipc call brightness increase"
         ",XF86MonBrightnessDown, exec, noctalia-shell ipc call brightness decrease"
+
         ",XF86WLAN, exec, noctalia-shell ipc call wifi toggle"
         ",XF86NotificationCenter, exec, noctalia-shell ipc call notifications toggleHistory"
         ",XF86Display, exec, notify-send -a \"System Messages\" \"Huh, seems like Hyprland didn't have this function implemented afterall 🫤\""
