@@ -10,6 +10,7 @@
       ./users.nix
       ./misc.nix
       ./power.nix
+      ./systemd.nix
       /etc/nixos/hardware.nix
     ];
 }
