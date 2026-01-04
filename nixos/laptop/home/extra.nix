@@ -24,6 +24,9 @@
     scrcpy
     vscode
     google-chrome
+    zoxide
+    eza
+    fzf
   ];
 
   home.sessionVariables = {
