@@ -13,8 +13,8 @@
 
         RESTORE_DEVICE_STATE_ON_STARTUP = "1";
 
-        "INTEL_GPU_MIN_FREQ_ON_AC" = "300";
-        "INTEL_GPU_MIN_FREQ_ON_BAT" = "300";
+        "INTEL_GPU_MIN_FREQ_ON_AC" = "500";
+        "INTEL_GPU_MIN_FREQ_ON_BAT" = "500";
         "INTEL_GPU_MAX_FREQ_ON_AC" = "1150";
         "INTEL_GPU_MAX_FREQ_ON_BAT" = "1150";
         "INTEL_GPU_BOOST_FREQ_ON_AC" = "1150";
