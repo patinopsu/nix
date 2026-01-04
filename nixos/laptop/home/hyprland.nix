@@ -22,6 +22,7 @@
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "noctalia-shell ipc call launcher toggle";
+      "$browser" = "google-chrome-stable";
       "$mainMod" = "SUPER";
 
       "exec-once" = [
@@ -179,12 +180,19 @@
       ];
 
       bindel = [
-        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
+        ",XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
+        ",XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
+        ",XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
+        ",XF86AudioMicMute, exec, noctalia-shell ipc call volume muteInput"
+        ",XF86MonBrightnessUp, exec, noctalia-shell ipc call brightness increase"
+        ",XF86MonBrightnessDown, exec, noctalia-shell ipc call brightness decrease"
+        ",XF86WLAN, exec, noctalia-shell ipc call wifi toggle"
+        ",XF86NotificationCenter, exec, noctalia-shell ipc call notifications toggleHistory"
+        ",XF86Display, exec, notify-send -a \"System Messages\" \"Huh, seems like Hyprland didn't have this function implemented afterall 🫤\""
+
+        ",XF86Favorites, exec, noctalia-shell ipc call launcher toggle"
+        ",XF86PickupPhone, exec, $terminal"
+        ",XF86HangupPhone, exec, $browser"
       ];
 
       bindm = [
