@@ -1,0 +1,11 @@
+{
+  virtualisation.vmware = {
+    host = {
+      enable = true;
+      extraConfig = ''
+        mks.gl.allowUnsupportedDrivers = "TRUE"
+        mks.vk.allowUnsupportedDevices = "TRUE"
+      '';
+    };
+  };
+}

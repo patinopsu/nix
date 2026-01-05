@@ -12,6 +12,7 @@
       ./power.nix
       ./systemd.nix
       ./audio.nix
+      ./virtualization.nix
       /etc/nixos/hardware.nix
     ];
 }
