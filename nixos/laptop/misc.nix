@@ -1,17 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  hardware.bluetooth.enable = true;
-  services.udisks2.enable = true;
-  services.tumbler.enable = true;
-  services.flatpak.enable = true;
   nixpkgs.config.allowUnfree = true;
-  security.rtkit.enable = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   time.timeZone = "Asia/Bangkok";
-  security.polkit.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
+  services = {
+    udisks2.enable = true;
+    tumbler.enable = true;
+    flatpak.enable = true;
+  };
+  
   environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   environment.etc = {
     "1password/custom_allowed_browsers" = {
@@ -26,7 +25,6 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      liberation_ttf
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
@@ -39,15 +37,13 @@
     tpm2-tss
     mesa-demos
     vulkan-tools
+    pkgs.distrobox
   ];
 
   programs.nix-ld.enable = true;
   programs.gpu-screen-recorder.enable = true;
   programs._1password.enable = true;
-  programs._1password-gui = {
-    enable = true;
-    polkitPolicyOwners = [ "patin" ];
-  };
+  programs._1password-gui.enable = true;
   xdg.menus.enable = true;
   xdg.mime.enable = true;
   system.stateVersion = "25.11";

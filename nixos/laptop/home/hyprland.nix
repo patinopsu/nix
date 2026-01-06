@@ -8,7 +8,7 @@
     portalPackage = null;
     settings = {
       monitor = [
-        ", highres, auto, 1"
+        ", preferred, auto, 1"
         "eDP-1, highres, auto, 1"
       ];
 
@@ -171,6 +171,10 @@
 
         "$mainMod SHIFT, left, layoutmsg, movewindowto r"
         "$mainMod SHIFT, right, layoutmsg, movewindowto l"
+
+        ", PRINT, exec, ~/scripts/screenshots.sh full"
+        "Alt, PRINT, exec, ~/scripts/screenshots.sh window"
+        "Ctrl, PRINT, exec, ~/scripts/screenshots.sh region"
       ];
 
       bindl = [

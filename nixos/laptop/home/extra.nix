@@ -27,7 +27,18 @@
     zoxide
     eza
     fzf
+    wl-clipboard
+    grim
+    slurp
+    jq
+    imv
+    wl-clipboard
+    haruna
   ];
+
+  home.file."scripts" = {
+    source = ../../../scripts;
+  };
 
   home.sessionVariables = {
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";

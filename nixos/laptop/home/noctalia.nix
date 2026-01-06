@@ -25,7 +25,7 @@
         mprisBlacklist = [];
         preferredPlayer = "";
         visualizerType = "linear";
-        volumeOverdrive = false;
+        volumeOverdrive = true;
         volumeStep = 5;
       };
 
@@ -92,12 +92,6 @@
             }
           ];
           right = [
-            {
-              colorName = "onSurface";
-              hideWhenIdle = false;
-              id = "AudioVisualizer";
-              width = 100;
-            }
             {
               displayMode = "onhover";
               id = "WiFi";

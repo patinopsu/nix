@@ -1,6 +1,13 @@
 { lib, pkgs, ... }:
 
 {
+  services = {
+    gnome.gnome-keyring.enable = true;
+  };
+  security = {
+    rtkit.enable = true;
+    polkit.enable = true;
+  };
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "GMOME Authentication Agent";

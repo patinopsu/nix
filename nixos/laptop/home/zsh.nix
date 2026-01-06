@@ -11,6 +11,9 @@
         theme = "robbyrussell";
         plugins = [
           "git"
+          "eza"
+          "zoxide"
+          "fzf"
         ];
       };
       initContent = ''

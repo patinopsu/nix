@@ -10,7 +10,7 @@
       ./users.nix
       ./misc.nix
       ./power.nix
-      ./systemd.nix
+      ./security.nix
       ./audio.nix
       ./virtualization.nix
       /etc/nixos/hardware.nix
