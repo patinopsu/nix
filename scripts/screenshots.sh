@@ -22,7 +22,7 @@ copy_clipboard() {
 
 case "$MODE" in
   full)
-    grim "$FILEPATH"
+    grim -c -o "$(hyprctl activeworkspace -j | jq -r '.monitor')" "$FILEPATH"
     ;;
 
   region)
