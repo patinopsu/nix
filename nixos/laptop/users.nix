@@ -3,7 +3,7 @@
 {
   users.users.patin = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager" "docker" "i2c" "lp" "scanner" "input"];
+    extraGroups = [ "wheel" "networkmanager" "docker" "i2c" "lp" "scanner" "input" "libvirtd" ];
     description = "Patin Muangjan";
     shell = pkgs.zsh;
   };
