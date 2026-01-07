@@ -27,8 +27,12 @@
         screenfix = "~/scripts/monitor-handle.sh init";
 	      hyprinit = "uwsm start default";
         garbagecollect = "sudo nix-collect-garbage -d && nixupdate";
+        cd = "z";
       };
     };
+  programs.atuin = {
+    enable = true;
+  };
   home.sessionVariables = {
     ZSH_COMPDUMP = "${config.home.homeDirectory}/.cache/zsh/.zcompdump";
   };
