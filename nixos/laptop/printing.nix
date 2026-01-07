@@ -8,7 +8,8 @@
     cups-pdf.enable = true;
     browsed.enable = true;
     drivers = with pkgs; [
-      gutenprint 
+      gutenprint
+      cnijfilter2
       hplip
       ];
   };
