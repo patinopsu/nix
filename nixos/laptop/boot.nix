@@ -34,6 +34,7 @@
         intel-media-driver
       ];
     };
+    intel-gpu-tools.enable = true;
     i2c = {
       enable = true;
     };
