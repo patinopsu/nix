@@ -44,6 +44,7 @@
   programs.gpu-screen-recorder.enable = true;
   programs._1password.enable = true;
   programs._1password-gui.enable = true;
+  programs._1password-gui.polkitPolicyOwners = [ "patin" ];
   xdg.menus.enable = true;
   xdg.mime.enable = true;
   system.stateVersion = "25.11";
