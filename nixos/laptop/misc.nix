@@ -37,7 +37,7 @@
     tpm2-tss
     mesa-demos
     vulkan-tools
-    pkgs.distrobox
+    distrobox
   ];
 
   programs.nix-ld.enable = true;
