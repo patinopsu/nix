@@ -12,6 +12,7 @@
       ./power.nix
       ./security.nix
       ./audio.nix
+      ./printing.nix
       ./virtualization.nix
       /etc/nixos/hardware.nix
     ];
