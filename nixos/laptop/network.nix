@@ -16,7 +16,7 @@ in
     ];
     networkmanager = {
       enable = true;
-      dhcp = "dhcpcd";
+      dhcp = "internal";
       dns = "systemd-resolved";
       wifi = {
         backend = "wpa_supplicant";
