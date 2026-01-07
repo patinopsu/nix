@@ -8,7 +8,7 @@
     portalPackage = null;
     settings = {
       monitor = [
-        ", preferred, auto, 1"
+        ", highres, auto, 1"
         "eDP-1, highres, auto, 1"
       ];
 
