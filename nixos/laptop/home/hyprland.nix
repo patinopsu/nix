@@ -125,6 +125,10 @@
           name = "synps/2-synaptics-touchpad";
           sensitivity = 0.5;
         }
+        {
+          name = "yichip-wireless-device-mouse";
+          sensitivity = -0.5;
+        }
       ];
 
       bind = [
