@@ -26,9 +26,10 @@
         ./laptop/network.nix
         ./laptop/theming.nix
         ./laptop/users.nix
-        ./laptop/misc.nix
+        ./laptop/extra.nix
         ./laptop/power.nix
         ./laptop/security.nix
+        ./laptop/packages.nix
         ./laptop/audio.nix
         ./laptop/printing.nix
         ./laptop/virtualization.nix
