@@ -22,7 +22,6 @@
         "noctalia-shell"
       ];
 
-      # Env
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
@@ -137,16 +136,9 @@
         "$mainMod, Q, killactive"
         "$mainMod, V, exec, noctalia-shell ipc call launcher clipboard"
         "$mainMod, E, exec, $fileManager"
+        
         "Alt, Space, exec, $menu"
-
         "$mainMod, L, exec, hyprlock"
-
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
-        "ALT, Tab, cyclenext"
-        "ALT, Tab, bringactivetotop"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -174,6 +166,12 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+        "ALT, Tab, cyclenext"
+        "ALT, Tab, bringactivetotop"
+        "$mainMod, A, movefocus, l"
+        "$mainMod, D, movefocus, r"
+        "$mainMod, W, movefocus, u"
+        "$mainMod, S, movefocus, d"
         "bind = $mainMod, X, layoutmsg, move +col"
         "bind = $mainMod, Z, layoutmsg, move -col"
         "bind = $mainMod SHIFT, X, layoutmsg, movewindowto r"
