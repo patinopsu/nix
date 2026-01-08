@@ -7,29 +7,32 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia-plugins = {
-      url = "github:noctalia-dev/noctalia-plugins?submodules=1";
-      flake = false;
-    };
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.0.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    hyprland-plugins.inputs.hyprland.follows = "hyprland";
+    noctalia.url = "github:noctalia-dev/noctalia-shell";
+    noctalia.inputs.nixpkgs.follows = "nixpkgs";
+    noctalia-plugins.url = "github:noctalia-dev/noctalia-plugins?submodules=1";
+    noctalia-plugins.flake = false;
+    lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
+    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, ... }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./laptop/import.nix
+        ./laptop/boot.nix
+        ./laptop/gui.nix
+        ./laptop/network.nix
+        ./laptop/theming.nix
+        ./laptop/users.nix
+        ./laptop/misc.nix
+        ./laptop/power.nix
+        ./laptop/security.nix
+        ./laptop/audio.nix
+        ./laptop/printing.nix
+        ./laptop/virtualization.nix
+        /etc/nixos/hardware.nix
         inputs.stylix.nixosModules.stylix
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.home-manager.nixosModules.home-manager
