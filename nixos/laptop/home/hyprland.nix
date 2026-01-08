@@ -97,7 +97,8 @@
       plugin = {
         hyprscrolling = {
           column_width = 0.7;
-          fullscreen_on_one_column = false;
+          fullscreen_on_one_column = true;
+          follow_focus = true;
         };
       };
 
@@ -173,8 +174,13 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        "$mainMod SHIFT, left, layoutmsg, movewindowto r"
-        "$mainMod SHIFT, right, layoutmsg, movewindowto l"
+        "bind = $mainMod, X, layoutmsg, move +col"
+        "bind = $mainMod, Z, layoutmsg, move -col"
+        "bind = $mainMod SHIFT, X, layoutmsg, movewindowto r"
+        "bind = $mainMod SHIFT, Z, layoutmsg, movewindowto l"
+        "bind = $mainMod SHIFT, up, layoutmsg, movewindowto u"
+        "bind = $mainMod SHIFT, down, layoutmsg, movewindowto d"
+        "bind = $mainMod SHIFT, A, layoutmsg, promote"
 
         ", PRINT, exec, ~/scripts/screenshots.sh full"
         "Alt, PRINT, exec, ~/scripts/screenshots.sh window"
