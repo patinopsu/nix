@@ -19,6 +19,8 @@
     mesa-demos
     vulkan-tools
     distrobox
+    swtpm
+    dnsmasq
   ];
   fonts = {
     enableDefaultPackages = true;
