@@ -5,6 +5,7 @@
     udisks2.enable = true;
     tumbler.enable = true;
     flatpak.enable = true;
+    
   };
   programs = {
     nix-ld.enable = true;
@@ -21,6 +22,7 @@
     distrobox
     swtpm
     dnsmasq
+    android-tools
   ];
   fonts = {
     enableDefaultPackages = true;
