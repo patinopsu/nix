@@ -24,6 +24,7 @@
       };
     };
     kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ config.boot.kernelPackages.kvmfr ];
   };
 
   hardware = {
@@ -38,6 +39,5 @@
     i2c = {
       enable = true;
     };
-    enableAllFirmware = true;
   };
 }
