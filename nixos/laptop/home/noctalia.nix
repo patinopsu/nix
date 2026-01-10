@@ -88,7 +88,6 @@
               drawerEnabled = true;
               hidePassive = false;
               id = "Tray";
-              #pinned = ["Flameshot" "Discord"];
             }
           ];
           right = [
@@ -156,7 +155,7 @@
       brightness = {
         brightnessStep = 5;
         enableDdcSupport = true;
-        enforceMinimum = true;
+        enforceMinimum = false;
       };
 
       calendar = {
@@ -221,11 +220,10 @@
         position = "close_to_bar_button";
         shortcuts = {
           left = [
-            {id = "ScreenRecorder";}
+            {id = "PowerProfile";}
             {id = "Bluetooth";}
           ];
           right = [
-            {id = "PowerProfile";}
             {id = "KeepAwake";}
             {id = "NightLight";}
           ];
