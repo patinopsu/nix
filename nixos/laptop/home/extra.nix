@@ -12,7 +12,6 @@
 
   home.packages = with pkgs; [
     bat
-    neovim
     s-tui
     lazygit
     pavucontrol
@@ -24,15 +23,14 @@
     scrcpy
     vscode
     google-chrome
+    wl-clipboard
     zoxide
     eza
     fzf
-    wl-clipboard
     grim
     slurp
     jq
     imv
-    wl-clipboard
     haruna
   ];
 
