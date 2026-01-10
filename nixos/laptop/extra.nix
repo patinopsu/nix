@@ -14,10 +14,6 @@
         google-chrome-stable
       '';
     };
-    "/xdg/menus/applications.menu" = {
-      text = ''
-        builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
-      '';
-    };
+    "/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 }
