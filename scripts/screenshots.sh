@@ -4,6 +4,7 @@ echo Hyprland Screenshot Ultility
 
 set -e
 
+GEOM=$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
 DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$DIR"
 
@@ -30,7 +31,6 @@ case "$MODE" in
     ;;
 
   window)
-    GEOM=$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
     grim -g "$GEOM" "$FILEPATH"
     ;;
 
