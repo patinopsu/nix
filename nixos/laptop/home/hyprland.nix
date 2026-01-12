@@ -104,7 +104,7 @@
       input = {
         kb_layout = "us,th";
         kb_options = "grp:win_space_toggle";
-        follow_mouse = 0;
+        follow_mouse = 2;
         sensitivity = 0;
         accel_profile = "flat";
         touchpad = {
