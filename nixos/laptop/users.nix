@@ -16,6 +16,7 @@
         ./home/git.nix
         ./home/ssh.nix
         ./home/zsh.nix
+        ./home/neovim.zsh
         ./home/kitty.nix
         ./home/noctalia.nix
         ./home/hyprland.nix
