@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-pale.yaml";
-  stylix.image = /home/patin/Pictures/walls/walls1.png;
+  stylix.image = /home/patin/walls/walls1.png;
   stylix.polarity = "dark";
 
   stylix = {

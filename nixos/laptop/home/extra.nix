@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.username = "patin";
@@ -22,7 +22,8 @@
     libnotify
     scrcpy
     vscode
-    google-chrome
+    bgoogle-chrome
+    librewolf
     wl-clipboard
     zoxide
     eza
@@ -36,6 +37,9 @@
 
   home.file."scripts" = {
     source = ../../../scripts;
+  };
+  home.file."walls" = {
+    source = ../../../walls;
   };
 
   home.sessionVariables = {

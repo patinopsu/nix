@@ -23,7 +23,7 @@
 
       background = lib.mkForce [
         {
-          path = "${config.stylix.image}";
+          #path = "${config.stylix.image}";
           blur_passes = 2;
           blur_size = 3;
         }
