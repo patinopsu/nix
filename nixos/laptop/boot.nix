@@ -5,7 +5,6 @@
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        #efiSysMountPoint = "/boot/efi";
       };
       systemd-boot = lib.mkForce {
         enable = false;
@@ -24,7 +23,10 @@
       };
     };
     kernelPackages = pkgs.linuxPackages_latest;
-    extraModulePackages = [ config.boot.kernelPackages.kvmfr ];
+    kernelParams = [
+      "quiet"
+      "splash"
+    ];
   };
 
   hardware = {
