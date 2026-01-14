@@ -20,6 +20,7 @@
         ./home/kitty.nix
         ./home/noctalia.nix
         ./home/hyprland.nix
+        ./home/hyprpaper.nix
         ./home/hypridle.nix
         ./home/hyprlock.nix
         ./home/extra.nix
