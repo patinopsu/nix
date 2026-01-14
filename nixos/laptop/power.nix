@@ -38,5 +38,8 @@
     tuned = {
       enable = true;
     };
+    tlp = {
+      enable = false;
+    };
   };
 }
