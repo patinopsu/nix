@@ -38,34 +38,5 @@
     tuned = {
       enable = true;
     };
-    tlp = {
-      enable = false;
-      settings = {
-        "TLP_ENABLE" = "1";
-
-        CPU_ENERGY_PERF_POLICY_ON_AC = ""; # To make throttled work properly
-        CPU_ENERGY_PERF_POLICY_ON_BAT = "balanced_power";
-
-        CPU_BOOST_ON_AC = "1";
-        CPU_BOOST_ON_BAT = "1";
-
-        CPU_HWP_DYN_BOOST_ON_AC = "1";
-        CPU_HWP_DYN_BOOST_ON_BAT = "0";
-  
-        RESTORE_DEVICE_STATE_ON_STARTUP = "1";
-
-        "START_CHARGE_THRESH_BAT0" = "80";
-        "STOP_CHARGE_THRESH_BAT0" = "97";
-
-        "PLATFORM_PROFILE_ON_AC" = "performance";
-        "PLATFORM_PROFILE_ON_BAT" = "balanced";
-
-        PCIE_ASPM_ON_BAT = "powersupersave";
-        
-        "MEM_SLEEP_ON_AC" = "s2idle";
-        "MEM_SLEEP_ON_BAT" = "deep";
-        
-      };
-    };
   };
 }
