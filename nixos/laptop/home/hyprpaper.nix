@@ -7,6 +7,6 @@
           path = ~/walls/tt2.jpg;
           fit_mode = cover;
       };
-    }
+    };
   };
 }
