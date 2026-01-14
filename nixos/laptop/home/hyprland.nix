@@ -13,7 +13,7 @@
       ];
 
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "pcmanfm";
       "$menu" = "noctalia-shell ipc call launcher toggle";
       "$browser" = "google-chrome-stable";
       "$mainMod" = "SUPER";

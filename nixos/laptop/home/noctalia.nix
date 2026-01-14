@@ -3,7 +3,7 @@
 {
   programs.noctalia-shell = {
     enable = true;
-    package =  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; };
+    package = null;  #inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; };
     settings = {
       appLauncher = {
         customLaunchPrefix = "";
@@ -480,7 +480,7 @@
       wallpaper = {
         directory = "/home/patin/Pictures/walls";
         enableMultiMonitorDirectories = false;
-        enabled = true;
+        enabled = false;
         fillColor = "#000000";
         fillMode = "crop";
         hideWallpaperFilenames = false;

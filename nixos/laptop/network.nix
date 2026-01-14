@@ -6,7 +6,7 @@ in
 
 {
   networking = {
-    hostName = "atlanta";
+    hostName = "fonddulac";
     wireless.enable = true;
     nameservers = [
       "45.90.28.0#${nextdnsHost}"

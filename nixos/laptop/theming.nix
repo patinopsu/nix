@@ -34,5 +34,10 @@
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };
+    cursor = {
+      name = "WhiteSur-cursors";
+      package = pkgs.whitesur-cursors;
+      size = 24;
+    };
   };
 }

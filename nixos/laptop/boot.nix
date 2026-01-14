@@ -5,7 +5,7 @@
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        #efiSysMountPoint = "/boot/efi";
       };
       systemd-boot = lib.mkForce {
         enable = false;

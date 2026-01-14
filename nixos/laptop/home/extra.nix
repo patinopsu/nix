@@ -22,8 +22,8 @@
     libnotify
     scrcpy
     vscode
-    bgoogle-chrome
-    librewolf
+    noctalia-shell
+    firefox
     wl-clipboard
     zoxide
     eza
@@ -33,6 +33,7 @@
     jq
     imv
     haruna
+    pcmanfm
   ];
 
   home.file."scripts" = {

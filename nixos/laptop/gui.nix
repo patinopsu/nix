@@ -9,20 +9,6 @@
       xwayland.enable = true;
       withUWSM = true;
     };
-    evolution = {
-      enable = true;
-    };
-  };
-  environment.systemPackages = with pkgs; [
-    polkit_gnome
-    kdePackages.dolphin
-    kdePackages.ark
-  ];
-
-  services = {
-    gnome = {
-      evolution-data-server.enable = true;
-    };
   };
 
   environment.sessionVariables = {

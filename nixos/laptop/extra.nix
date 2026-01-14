@@ -9,11 +9,9 @@
   environment.etc = {
     "1password/custom_allowed_browsers" = {
       text = ''
-        chrome
-        google-chrome
-        google-chrome-stable
+        .librewolf-wrap
+        librewolf
       '';
     };
-    "/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 }
