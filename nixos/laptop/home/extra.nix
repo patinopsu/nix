@@ -22,7 +22,6 @@
     libnotify
     scrcpy
     vscode
-    noctalia-shell
     firefox
     wl-clipboard
     zoxide

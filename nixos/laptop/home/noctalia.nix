@@ -3,7 +3,6 @@
 {
   programs.noctalia-shell = {
     enable = true;
-    package = null;  #inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; };
     settings = {
       appLauncher = {
         customLaunchPrefix = "";
