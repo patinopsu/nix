@@ -20,8 +20,11 @@
     vulkan-tools
     distrobox
     swtpm
+    gparted
     dnsmasq
     android-tools
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
   ];
   fonts = {
     enableDefaultPackages = true;
