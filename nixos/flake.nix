@@ -27,6 +27,7 @@
         ./laptop/extra.nix
         ./laptop/power.nix
         ./laptop/security.nix
+        ./laptop/bluetooth.nix
         ./laptop/packages.nix
         ./laptop/audio.nix
         ./laptop/printing.nix
