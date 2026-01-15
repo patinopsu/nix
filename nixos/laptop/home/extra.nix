@@ -44,6 +44,5 @@
 
   home.sessionVariables = {
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
-    NOCTALIA_SETTINGS_FALLBACK = "$HOME/.config/noctalia/gui-settings.json";
   };
 }
