@@ -11,8 +11,6 @@
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
     noctalia.url = "github:noctalia-dev/noctalia-shell";
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
-    noctalia-plugins.url = "github:noctalia-dev/noctalia-plugins?submodules=1";
-    noctalia-plugins.flake = false;
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
   };
