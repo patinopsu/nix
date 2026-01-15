@@ -4,6 +4,7 @@
   programs.noctalia-shell = {
     enable = true;
     settings = {
+      settingsVersion = 32;
       appLauncher = {
         customLaunchPrefix = "";
         customLaunchPrefixEnabled = false;
@@ -178,17 +179,6 @@
         ];
       };
 
-      colorSchemes = {
-        darkMode = true;
-        generateTemplatesForPredefined = false;
-        manualSunrise = "06:30";
-        manualSunset = "18:30";
-        matugenSchemeType = "scheme-neutral";
-        predefinedScheme = "Tokyo Night Moon";
-        schedulingMode = "off";
-        useWallpaperColors = false;
-      };
-
       controlCenter = {
         cards = [
           {
@@ -229,24 +219,6 @@
         };
       };
 
-      desktopWidgets = {
-        enabled = false;
-        gridSnap = false;
-        monitorWidgets = [
-          {
-            name = "HDMI-A-2";
-            widgets = [
-              {
-                id = "Weather";
-                showBackground = true;
-                x = 1650;
-                y = 1001.2;
-              }
-            ];
-          }
-        ];
-      };
-
       dock = {
         animationSpeed = 1;
         colorizeIcons = false;
@@ -257,7 +229,6 @@
         inactiveIndicators = true;
         monitors = [];
         onlySameOutput = true;
-        pinnedApps = ["org.kde.dolphin"];
         pinnedStatic = false;
         size = 0.93;
       };
@@ -307,10 +278,6 @@
         useFahrenheit = false;
         weatherEnabled = true;
         weatherShowEffects = true;
-      };
-
-      network = {
-        wifiEnabled = false;
       };
 
       nightLight = {
@@ -411,59 +378,6 @@
         showHeader = true;
       };
 
-      settingsVersion = 32;
-
-      systemMonitor = {
-        cpuCriticalThreshold = 90;
-        cpuPollingInterval = 3000;
-        cpuWarningThreshold = 80;
-        criticalColor = "";
-        diskCriticalThreshold = 90;
-        diskPollingInterval = 3000;
-        diskWarningThreshold = 80;
-        enableDgpuMonitoring = false;
-        gpuCriticalThreshold = 90;
-        gpuPollingInterval = 3000;
-        gpuWarningThreshold = 80;
-        memCriticalThreshold = 90;
-        memPollingInterval = 3000;
-        memWarningThreshold = 80;
-        networkPollingInterval = 3000;
-        tempCriticalThreshold = 90;
-        tempPollingInterval = 3000;
-        tempWarningThreshold = 80;
-        useCustomColors = false;
-        warningColor = "";
-      };
-
-      templates = {
-        alacritty = false;
-        cava = false;
-        code = false;
-        discord = false;
-        emacs = false;
-        enableUserTemplates = false;
-        foot = false;
-        fuzzel = false;
-        ghostty = false;
-        gtk = false;
-        helix = false;
-        hyprland = false;
-        kcolorscheme = false;
-        kitty = false;
-        mango = false;
-        niri = true;
-        pywalfox = false;
-        qt = false;
-        spicetify = false;
-        telegram = false;
-        vicinae = false;
-        walker = false;
-        wezterm = false;
-        yazi = false;
-        zed = false;
-      };
-
       ui = {
         bluetoothDetailsViewMode = "grid";
         bluetoothHideUnnamedDevices = false;
@@ -477,57 +391,9 @@
       };
 
       wallpaper = {
-        directory = "/home/patin/Pictures/walls";
-        enableMultiMonitorDirectories = false;
         enabled = false;
-        fillColor = "#000000";
-        fillMode = "crop";
-        hideWallpaperFilenames = false;
-        monitorDirectories = [];
-        overviewEnabled = false;
-        panelPosition = "follow_bar";
-        randomEnabled = false;
-        randomIntervalSec = 300;
-        recursiveSearch = true;
-        setWallpaperOnAllMonitors = true;
-        transitionDuration = 1500;
-        transitionEdgeSmoothness = 0.05;
-        transitionType = "random";
-        useWallhaven = false;
-        wallhavenCategories = "010";
-        wallhavenOrder = "asc";
-        wallhavenPurity = "100";
-        wallhavenQuery = "";
-        wallhavenRatios = "16x9";
-        wallhavenResolutionHeight = "";
-        wallhavenResolutionMode = "atleast";
-        wallhavenResolutionWidth = "";
-        wallhavenSorting = "random";
       };
     };
   };
   stylix.targets.noctalia-shell.enable = true;
-  home.file.".config/noctalia/plugins" = {
-      source = inputs.noctalia-plugins;
-  };
-  home.file.".config/noctalia/plugins.json" = {
-    text = ''
-      {
-          "sources": [
-              {
-                  "enabled": true,
-                  "name": "Official Noctalia Plugins",
-                  "url": "https://github.com/noctalia-dev/noctalia-plugins"
-              }
-          ],
-          "states": {
-              "privacy-indicator": {
-                  "enabled": true,
-                  "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-              }
-          },
-          "version": 1
-      }
-    '';
-  };
 }
