@@ -5,6 +5,10 @@
   nixpkgs.config.allowUnfree = true;
   time.timeZone = "Asia/Bangkok";
 
+  environment.etc = {
+    "/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  };
+
   nix = {
     optimise.automatic = true;
     settings = {

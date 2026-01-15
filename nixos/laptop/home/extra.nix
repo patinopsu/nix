@@ -32,7 +32,7 @@
     jq
     imv
     haruna
-    pcmanfm
+    kdePackages.dolphin
   ];
 
   home.file."scripts" = {
