@@ -307,7 +307,7 @@
           lowSoundFile = "";
           normalSoundFile = "";
           separateSounds = false;
-          volume = 1;
+          volume = 0.40;
         };
       };
 
