@@ -394,6 +394,22 @@
         enabled = false;
       };
     };
+    plugins = {
+      version = 1;
+      sources = [
+        {
+          enabled = true;
+          name = "Official Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        privacy-indicator = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+    };
   };
   stylix.targets.noctalia-shell.enable = true;
 }
