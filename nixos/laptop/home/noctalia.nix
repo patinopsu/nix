@@ -154,7 +154,7 @@
       brightness = {
         brightnessStep = 5;
         enableDdcSupport = true;
-        enforceMinimum = false;
+        enforceMinimum = true;
       };
 
       calendar = {
