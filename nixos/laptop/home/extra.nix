@@ -32,6 +32,8 @@
     jq
     imv
     haruna
+    lolcat
+    figlet
     kdePackages.kio
     kdePackages.kio-extras
     kdePackages.breeze-icons
