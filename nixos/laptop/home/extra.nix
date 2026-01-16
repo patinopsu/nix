@@ -34,6 +34,7 @@
     haruna
     lolcat
     figlet
+    usbutils
     kdePackages.kio
     kdePackages.kio-extras
     kdePackages.breeze-icons
