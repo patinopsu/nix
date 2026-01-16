@@ -137,6 +137,7 @@
         "$mainMod, Q, killactive"
         "$mainMod, V, exec, noctalia-shell ipc call launcher clipboard"
         "$mainMod, E, exec, $fileManager"
+        "$mainMod Shift, R, exec, ~/scripts/record.sh"
         
         "Alt, Space, exec, $menu"
         "$mainMod, L, exec, hyprlock"
