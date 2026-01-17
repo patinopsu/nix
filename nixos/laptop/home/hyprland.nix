@@ -19,7 +19,6 @@
       "$mainMod" = "SUPER";
 
       "exec-once" = [
-        "hyprpaper"
         "noctalia-shell"
       ];
 
