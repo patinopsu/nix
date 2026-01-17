@@ -16,12 +16,6 @@
           "fzf"
         ];
       };
-      initContent = ''
-        if uwsm check may-start; then
-          echo Starting Hyprland
-          exec uwsm start default
-        fi  
-      '';
       shellAliases = {
         nixupdate = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
         screenfix = "~/scripts/monitor-handle.sh init";
