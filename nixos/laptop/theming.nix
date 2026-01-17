@@ -1,11 +1,11 @@
 { pkgs, config, ... }:
 
 {
-  stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-pale.yaml";
-  stylix.polarity = "dark";
-
   stylix = {
+    enable = true;
+    polarity = "dark";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-pale.yaml";
+    image = /home/patin/walls/FreshCake_computerFiles.jpg;
     fonts = {
       serif = {
         name = "Noto Serif";
