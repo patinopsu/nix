@@ -12,7 +12,7 @@
   };
 
   environment.sessionVariables = {
-    TERMINAL= "kitty";
+    TERMINAL = "kitty";
   };
 
   xdg = {
