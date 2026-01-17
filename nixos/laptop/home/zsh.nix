@@ -17,10 +17,8 @@
         ];
       };
       shellAliases = {
-        nixupdate = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
-        screenfix = "~/scripts/monitor-handle.sh init";
-	      hyprinit = "uwsm start default";
-        garbagecollect = "sudo nix-collect-garbage -d && nixupdate";
+        nrb = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
+        garbagecollect = "sudo nix-collect-garbage -d && sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
         cd = "z";
       };
     };
