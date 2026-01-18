@@ -50,6 +50,8 @@
     kdePackages.baloo 
     kdePackages.baloo-widgets 
     kdePackages.dolphin
+    kdePackages.ark
+    kdePackages.kate
   ];
 
   home.file."scripts" = {
