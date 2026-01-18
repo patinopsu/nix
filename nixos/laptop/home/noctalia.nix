@@ -364,7 +364,7 @@
           }
           {
             action = "logout";
-            command = "";
+            command = "loginctl terminate-user \"\"";
             countdownEnabled = true;
             enabled = true;
           }
