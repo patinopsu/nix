@@ -340,8 +340,8 @@
         powerOptions = [
           {
             action = "lock";
-            command = "";
-            countdownEnabled = true;
+            command = "hyprlock";
+            countdownEnabled = false;
             enabled = true;
           }
           {
