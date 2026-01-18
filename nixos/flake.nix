@@ -33,7 +33,7 @@
         ./laptop/audio.nix
         ./laptop/printing.nix
         ./laptop/virtualization.nix
-        /etc/nixos/hardware.nix
+        ./laptop/hardware.nix
         inputs.stylix.nixosModules.stylix
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.home-manager.nixosModules.home-manager
