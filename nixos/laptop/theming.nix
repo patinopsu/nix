@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-pale.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest-dark-hard.yaml";
     image = /home/patin/walls/FreshCake_computerFiles.jpg;
     fonts = {
       serif = {
