@@ -22,10 +22,12 @@
         enable = true;
       };
     };
+    resumeDevice = "/dev/mapper/nix";
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "quiet"
       "splash"
+      "resume_offset=8709017"
     ];
   };
 
