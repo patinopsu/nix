@@ -1,5 +1,9 @@
 { pkgs, ...}:
 
+let
+  hibernateDelay = "3600";
+in
+
 {
   services = {
     upower.enable = true;
@@ -41,5 +45,14 @@
     tlp = {
       enable = false;
     };
+    logind.settings.Login = {
+      HandleLidSwitch = "suspend-then-hibernate";
+      HandleLidSwitchExternalPower = "suspend";
+      HandleLidSwitchDocked= "suspend";
+      HibernateDelaySec = "${hibernateDelay}";
+    };
   };
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=${hibernateDelay}
+  '';
 }
