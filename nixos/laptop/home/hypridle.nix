@@ -14,7 +14,7 @@
         }
         {
           timeout = 180;
-          on-timeout = "systemctl suspend";
+          on-timeout = "systemctl suspend-then-hibernate";
         }
       ];
     };
