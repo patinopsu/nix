@@ -5,7 +5,6 @@
     enable = true;
     settings = {
       animation = "colormix";
-      battery_id = "BAT0";
       bigclock = "en";
       box_title = "Patin's ThinkPad T14 Gen 1";
       brightness_down_key = "";
