@@ -1,0 +1,46 @@
+let
+  nextdnsHost = builtins.readFile /etc/nextdns-id;
+in
+
+{
+  networking = {
+    hostName = "portland";
+    wireless.enable = true;
+    nameservers = [
+      "45.90.28.0#${nextdnsHost}"
+      "45.90.30.0#${nextdnsHost}"
+      "2a07:a8c0::#${nextdnsHost}"
+      "2a07:a8c1::#${nextdnsHost}"
+    ];
+    networkmanager = {
+      enable = true;
+      dhcp = "internal";
+      dns = "systemd-resolved";
+      wifi = {
+        backend = "wpa_supplicant";
+        macAddress = "stable-ssid";
+      };
+    };
+    firewall = {
+      enable =  true;
+    };
+  };
+  services = {
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+    resolved = {
+      enable = true;
+      dnssec = "true";
+      dnsovertls = "true";
+      fallbackDns = [
+        "9.9.9.9"
+        "149.112.112.112"
+        "2620:fe::fe"
+        "2620:fe::9"
+      ];
+    };
+  };
+}

@@ -40,5 +40,21 @@
         nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen1
       ];
     };
+    nixosConfigurations.portable = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      system = "x86_64-linux";
+      modules = [
+        ./portable/boot.nix
+        ./portable/extra.nix
+        ./portable/gui.nix
+        ./portable/network.nix
+        ./portable/packages.nix
+        ./portable/hardware.nix
+        ./portable/theming.nix
+        ./portable/user.nix
+        inputs.stylix.nixosModules.stylix
+        inputs.home-manager.nixosModules.home-manager
+      ];
+    };
   };
 }
