@@ -6,7 +6,7 @@
     settings = {
       animation = "colormix";
       bigclock = "en";
-      box_title = "Patin's ThinkPad T14 Gen 1";
+      box_title = "Patin's Portable Gospel";
       brightness_down_key = "";
       brightness_up_key = "";
       clock = "%c";
