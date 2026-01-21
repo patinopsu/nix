@@ -54,10 +54,10 @@
   ];
 
   home.file."scripts" = {
-    source = ../../../scripts;
+    source = ../../src/scripts;
   };
   home.file."walls" = {
-    source = ../../../walls;
+    source = ../../src/walls;
   };
 
   home.sessionVariables = {
