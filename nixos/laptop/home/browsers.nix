@@ -8,6 +8,7 @@
       arkenfox.enable = true;
       profiles = {
         main = {
+          extensions.force = true;
           arkenfox = {
             enable = true;
             enableAllSections = true;
