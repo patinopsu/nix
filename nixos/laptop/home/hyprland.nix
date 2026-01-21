@@ -162,8 +162,6 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        "ALT, Tab, cyclenext"
-        "ALT, Tab, bringactivetotop"
         "$mainMod, A, movefocus, l"
         "$mainMod, D, movefocus, r"
         "$mainMod, W, movefocus, u"
