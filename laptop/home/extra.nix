@@ -42,7 +42,6 @@
     kdePackages.kdegraphics-thumbnailers 
     kdePackages.kdegraphics-mobipocket 
     kdePackages.kimageformats 
-    kdePackages.calligra 
     kdePackages.qtimageformats 
     kdePackages.ffmpegthumbs 
     kdePackages.taglib 
