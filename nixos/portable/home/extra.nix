@@ -37,7 +37,6 @@
     usbutils
     kdePackages.kio
     kdePackages.kio-extras
-    kdePackages.breeze-icons
     kdePackages.dolphin-plugins
     kdePackages.kdesdk-thumbnailers 
     kdePackages.kdegraphics-thumbnailers 
