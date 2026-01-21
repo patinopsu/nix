@@ -47,7 +47,8 @@
     kdePackages.qtimageformats 
     kdePackages.ffmpegthumbs 
     kdePackages.taglib 
-    kdePackages.baloo 
+    kdePackages.baloo
+    kdePackages.kservice
     kdePackages.baloo-widgets 
     kdePackages.dolphin
     kdePackages.ark
