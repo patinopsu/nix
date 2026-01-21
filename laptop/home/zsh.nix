@@ -17,8 +17,8 @@
         ];
       };
       shellAliases = {
-        nrb = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
-        garbagecollect = "sudo nix-collect-garbage -d && sudo nixos-rebuild switch --flake ~/dotfiles/nixos#laptop --impure";
+        nrb = "sudo nixos-rebuild switch --flake ~/nix#laptop --impure";
+        garbagecollect = "sudo nix-collect-garbage -d && sudo nixos-rebuild switch --flake ~/nix#laptop --impure";
         cd = "z";
       };
     };
