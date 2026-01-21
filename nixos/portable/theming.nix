@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/seti.yaml";
     image = /home/patin/walls/Takanashi.Hoshino.full.4173900.jpg;
     fonts = {
       serif = {
