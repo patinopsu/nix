@@ -13,5 +13,12 @@
       timeout = 10;
     };
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [
+      "quiet"
+      "splash"
+    ];
+    plymouth = {
+      enable = true;
+    };
   };
 }
