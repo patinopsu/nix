@@ -2,7 +2,11 @@
 
 {
   config = {
-    stylix.targets.firefox.profileNames = [ "main" ];
+    stylix.targets.firefox = {
+      profileNames = [ "main" ];
+      colorTheme.enable = true;
+      firefoxGnomeTheme.enable = true;
+    };
     programs.firefox = {
       enable = true;
       arkenfox.enable = true;
