@@ -26,7 +26,6 @@
         ./laptop/theming.nix
         ./laptop/users.nix
         ./laptop/extra.nix
-        ./laptop/displayManager.nix
         ./laptop/power.nix
         ./laptop/security.nix
         ./laptop/bluetooth.nix
