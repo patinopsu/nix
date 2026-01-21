@@ -1,0 +1,25 @@
+{ config, pkgs, inputs, ... }:
+
+{
+  config = {
+    stylix.targets.firefox.profileNames = [ "main" ];
+    programs.firefox = {
+      enable = true;
+      arkenfox.enable = true;
+      profiles = {
+        main = {
+          arkenfox = {
+            enable = true;
+            enableAllSections = true;
+            "4500" = {
+              "4501"."privacy.resistFingerprinting".value = false;
+            };
+            "2800" = {
+              "2815"."privacy.clearOnShutdown_v2.cookiesAndStorage".value = false;
+            };
+          };
+        };
+      };
+    };
+  };
+}
