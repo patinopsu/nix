@@ -23,7 +23,9 @@
         ./home/hypridle.nix
         ./home/hyprlock.nix
         ./home/extra.nix
+        ./home/browsers.nix
         inputs.noctalia.homeModules.default
+        inputs.arkenfox.hmModules.arkenfox
       ];
     };
   };
