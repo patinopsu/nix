@@ -40,8 +40,27 @@
       fsType = "btrfs";
       options = [ "subvol=@swap" "compress=zstd:3" "noatime" "discard=async" "commit=120" "space_cache=v2" "autodefrag" ];
     };
+  
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+      ];
+    };
+    intel-gpu-tools.enable = true;
+    i2c = {
+      enable = true;
+    };
+  };
 
-  swapDevices = [ ];
+  zramSwap = {
+    enable = true;
+    priority = 100;
+    algorithm = "zstd";
+    memoryPercent = 100; 
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
