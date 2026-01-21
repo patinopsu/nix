@@ -22,7 +22,6 @@
     libnotify
     scrcpy
     vscode
-    firefox
     wl-clipboard
     zoxide
     eza
