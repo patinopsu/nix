@@ -13,8 +13,9 @@
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+    arkenfox.url = "github:dwarfmaster/arkenfox-nixos";
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, ... }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
@@ -49,6 +50,7 @@
         ./portable/gui.nix
         ./portable/network.nix
         ./portable/packages.nix
+        ./portable/security.nix
         ./portable/hardware.nix
         ./portable/theming.nix
         ./portable/user.nix
