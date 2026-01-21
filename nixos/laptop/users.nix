@@ -20,9 +20,12 @@
         ./home/kitty.nix
         ./home/noctalia.nix
         ./home/hyprland.nix
+        ./home/browsers.nix
+        ./home/hyprshell.nix
         ./home/hypridle.nix
         ./home/hyprlock.nix
         ./home/extra.nix
+        inputs.arkenfox.hmModules.arkenfox
         inputs.noctalia.homeModules.default
       ];
     };
