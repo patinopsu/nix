@@ -6,7 +6,6 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    oh-my-zsh = {
     plugins = [
       {
         name = "powerlevel10k";
@@ -14,6 +13,7 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+    oh-my-zsh = { 
       enable = true;
         plugins = [
           "git"
