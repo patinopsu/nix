@@ -258,8 +258,8 @@
       };
 
       hooks = {
+        enabled = false;
         darkModeChange = "";
-        enabled = true;
         performanceModeDisabled = "";
         performanceModeEnabled = "";
         screenLock = "";
@@ -303,9 +303,9 @@
         sounds = {
           criticalSoundFile = "";
           enabled = true;
-          excludedApps = "discord,firefox,chrome,chromium,edge";
+          excludedApps = "udiskie,blueman";
           lowSoundFile = "";
-          normalSoundFile = "";
+          normalSoundFile = "${pkgs.kdePackages.oxygen-sounds}/share/sounds/oxygen/stereo/message-new-sms.ogg";
           separateSounds = false;
           volume = 0.40;
         };
@@ -318,18 +318,6 @@
         location = "bottom";
         monitors = [];
         overlayLayer = true;
-      };
-
-      screenRecorder = {
-        audioCodec = "opus";
-        audioSource = "default_output";
-        colorRange = "limited";
-        directory = "/home/patin/Videos";
-        frameRate = 60;
-        quality = "very_high";
-        showCursor = true;
-        videoCodec = "h264";
-        videoSource = "screen";
       };
 
       sessionMenu = {
@@ -405,10 +393,6 @@
       ];
       states = {
         privacy-indicator = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-        screen-recorder = {
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
