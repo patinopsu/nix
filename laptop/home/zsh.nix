@@ -7,8 +7,14 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
       enable = true;
-        theme = "robbyrussell";
         plugins = [
           "git"
           "eza"
@@ -16,6 +22,9 @@
           "fzf"
         ];
       };
+      initContent = ''
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      '';
       shellAliases = {
         nrb = "sudo nixos-rebuild switch --flake ~/nix#laptop --impure";
         garbagecollect = "sudo nix-collect-garbage -d && sudo nixos-rebuild switch --flake ~/nix#laptop --impure";
