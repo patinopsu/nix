@@ -7,7 +7,7 @@
       background_blur  = 1;
       window_margin_width = 10;
       background_opacity = lib.mkForce 0.9;
-      font_family = lib.mkForce "CaskaydiaCove Nerd Font Propo";
+      font_family = lib.mkForce "CaskaydiaCove NF";
 
       tab_bar_min_tabs = 1;
       tab_bar_edge = "bottom";
