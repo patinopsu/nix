@@ -46,9 +46,9 @@ in
       enable = false;
     };
     logind.settings.Login = {
-      HandleLidSwitch = "suspend-then-hibernate";
+      HandleLidSwitch = "suspend";
       HandleLidSwitchExternalPower = "suspend";
-      HandleLidSwitchDocked= "suspend";
+      HandleLidSwitchDocked = "suspend";
       HibernateDelaySec = "${hibernateDelay}";
     };
   };
