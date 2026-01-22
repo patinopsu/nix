@@ -1,7 +1,6 @@
 {
   services.hyprshell = {
-    enable = true;
-    
+    enable = false;
   };
 }
 
