@@ -23,7 +23,8 @@
         ];
       };
       initContent = ''
-        figlet -f doom NixOS
+        figlet -f doom NixOS | lolcat
+        fastfetch
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       '';
       shellAliases = {
