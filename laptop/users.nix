@@ -24,6 +24,7 @@
         ./home/hyprshell.nix
         ./home/hypridle.nix
         ./home/hyprlock.nix
+        ./home/fastfetch.nix
         ./home/extra.nix
         inputs.arkenfox.hmModules.arkenfox
         inputs.noctalia.homeModules.default
