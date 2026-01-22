@@ -1,7 +1,7 @@
 { pkgs, ...}:
 
 let
-  hibernateDelay = "3600";
+  hibernateDelay = "5400";
 in
 
 {
