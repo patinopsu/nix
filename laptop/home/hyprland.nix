@@ -19,6 +19,7 @@
       "$mainMod" = "SUPER";
 
       "exec-once" = [
+        "${pkgs.vorbis-tools}/bin/ogg123 ${pkgs.kdePackages.oxygen-sounds}/share/sounds/oxygen/stereo/desktop-login-short.ogg &"
         "noctalia-shell"
       ];
 
