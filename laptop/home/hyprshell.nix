@@ -1,6 +1,10 @@
+{ inputs, pkgs, ... }:
+
 {
   services.hyprshell = {
-    enable = false;
+    enable = true;
+    package = inputs.hyprshell.packages.${pkgs.system}.hyprshell-slim;
+
   };
 }
 
