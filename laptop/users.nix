@@ -28,6 +28,7 @@
         ./home/extra.nix
         inputs.arkenfox.hmModules.arkenfox
         inputs.noctalia.homeModules.default
+        inputs.hyprshell.homeModules.hyprshell
       ];
     };
   };
