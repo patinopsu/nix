@@ -17,7 +17,7 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     arkenfox.url = "github:dwarfmaster/arkenfox-nixos";
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, hyprshell, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, hyprshell, nix-flatpak, ... }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
