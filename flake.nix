@@ -34,6 +34,7 @@
         ./laptop/packages.nix
         ./laptop/audio.nix
         ./laptop/printing.nix
+        ./laptop/vpn.nix
         ./laptop/virtualization.nix
         ./laptop/hardware.nix
         inputs.stylix.nixosModules.stylix
