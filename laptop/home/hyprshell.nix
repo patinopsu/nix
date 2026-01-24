@@ -3,7 +3,7 @@
 {
   services.hyprshell = {
     enable = true;
-    package = inputs.hyprshell.packages.${pkgs.system}.hyprshell-slim;
+    package = inputs.hyprshell.packages.${pkgs.stdenv.hostPlatform.system}.hyprshell-slim;
     settings = {
       windows = {
         scale = 8.5;
