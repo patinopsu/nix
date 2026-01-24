@@ -22,21 +22,10 @@
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./laptop/boot.nix
-        ./laptop/gui.nix
-        ./laptop/network.nix
-        ./laptop/theming.nix
-        ./laptop/users.nix
-        ./laptop/extra.nix
-        ./laptop/power.nix
-        ./laptop/security.nix
-        ./laptop/bluetooth.nix
-        ./laptop/packages.nix
-        ./laptop/audio.nix
-        ./laptop/printing.nix
-        ./laptop/vpn.nix
-        ./laptop/virtualization.nix
-        ./laptop/hardware.nix
+        ./default.nix
+        ./hosts/t14gen1/boot.nix
+        ./hosts/t14gen1/hardware.nix
+        ./hosts/t14gen1/options.nix
         inputs.stylix.nixosModules.stylix
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.home-manager.nixosModules.home-manager
@@ -47,15 +36,10 @@
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./portable/boot.nix
-        ./portable/extra.nix
-        ./portable/gui.nix
-        ./portable/network.nix
-        ./portable/packages.nix
-        ./portable/security.nix
-        ./portable/hardware.nix
-        ./portable/theming.nix
-        ./portable/user.nix
+        ./default.nix
+        ./hosts/portland/options.nix
+        ./hosts/portland/boot.nix
+        ./hosts/portland/hardware.nix
         inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.home-manager
       ];

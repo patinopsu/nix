@@ -1,17 +1,12 @@
+{ config, lib, pkgs, ... }:
+
 let
   nextdnsHost = builtins.readFile /etc/nextdns-id;
 in
 
 {
   networking = {
-    hostName = "portland";
     wireless.enable = true;
-    nameservers = [
-      "45.90.28.0#${nextdnsHost}"
-      "45.90.30.0#${nextdnsHost}"
-      "2a07:a8c0::#${nextdnsHost}"
-      "2a07:a8c1::#${nextdnsHost}"
-    ];
     networkmanager = {
       enable = true;
       dhcp = "internal";
@@ -22,7 +17,7 @@ in
       };
     };
     firewall = {
-      enable =  true;
+      enable = true;
     };
   };
   services = {
@@ -33,14 +28,16 @@ in
     };
     resolved = {
       enable = true;
-      dnssec = "true";
-      dnsovertls = "true";
-      fallbackDns = [
-        "9.9.9.9"
-        "149.112.112.112"
-        "2620:fe::fe"
-        "2620:fe::9"
-      ];
+      settings.Resolve = {
+        DNSOverTLS = true;
+        DNSSEC = true;
+        DNS = ''
+          45.90.28.0#${nextdnsHost}
+          45.90.30.0#${nextdnsHost}
+          2a07:a8c0::#${nextdnsHost}
+          2a07:a8c1::#${nextdnsHost}
+        '';
+      };
     };
   };
 }
