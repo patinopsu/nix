@@ -29,8 +29,6 @@ in
     };
     resolved = {
       enable = true;
-      dnssec = "true";
-      dnsovertls = "true";
       fallbackDns = [
         "9.9.9.9"
         "149.112.112.112"
@@ -38,6 +36,8 @@ in
         "2620:fe::9"
       ];
       settings.Resolve = {
+        DNSOverTLS = true;
+        DNSSEC = true;
         DNS = ''
           45.90.28.0#${nextdnsHost}
           45.90.30.0#${nextdnsHost}
