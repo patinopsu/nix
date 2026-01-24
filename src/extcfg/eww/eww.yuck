@@ -1,0 +1,54 @@
+;; ts so confidential gng 💔
+(defwidget confidential_warning []
+  (box :class "warning-container" 
+       :orientation "v" 
+       :space-evenly false
+    (label :class "warning-header" 
+           :justify "left"
+           :markup "<span font_size='large' weight='bold'>NixOS Confidential</span>")
+  
+    (label :class "warning-body" 
+           :wrap true 
+           :justify "left"
+           :xalign 0
+           :text "Unauthorized access or side effects in any manner may result in immediate garbage collection of your user profile. Any attempt to modify this environment outside of a declared Flake will be treated as a build failure. Non-deterministic behavior will result in civil liability and the permanent loss of your /nix/store permissions.")
+  )
+)
+
+(defwindow confidential_warning
+  :monitor 0
+  :stacking "bg"
+  :geometry (geometry :x "140px" 
+                      :y "140px" 
+                      :width "600px" 
+                      :anchor "bottom right")
+  (confidential_warning))
+
+(defpoll os_name :interval "24h"
+  "grep '^NAME=' /etc/os-release | cut -d'=' -f2 | tr -d '\"'")
+
+(defpoll nix_build :interval "1h"
+  "readlink /nix/var/nix/profiles/system | cut -d'-' -f2-")
+
+(defwidget nixsysinfo []
+  (box :class "nixsysinfobox" 
+       :orientation "v" 
+       :space-evenly false
+       :halign "end"
+    (label :class "sysinfo-header" 
+           :xalign 1
+           :markup "<span font_size='medium' weight='bold'>${os_name} Operating System</span>")
+  
+    (label :class "sysinfo-body" 
+           :xalign 1
+           :text "For production use. Generation ${nix_build}")
+  )
+)
+
+(defwindow nixsysinfo
+  :monitor 0
+  :stacking "bg"
+  :geometry (geometry :width "600px" 
+                      :anchor "bottom right")
+  (nixsysinfo
+))
