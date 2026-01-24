@@ -10,15 +10,12 @@
       serif = {
         name = "Noto Serif";
       };
-
       sansSerif = {
         name = "Noto Sans";
       };
-
       monospace = {
         name = "CaskaydiaCove Nerd Font Mono";
       };
-
       emoji = {
         name = "Noto Color Emoji";
       };
