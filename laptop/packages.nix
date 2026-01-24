@@ -23,6 +23,7 @@
     cachix
     dnsmasq
     android-tools
+    tldr
   ];
   fonts = {
     enableDefaultPackages = true;
