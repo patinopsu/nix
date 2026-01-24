@@ -23,8 +23,6 @@
     cachix
     dnsmasq
     android-tools
-    gpu-screen-recorder
-    gpu-screen-recorder-gtk
   ];
   fonts = {
     enableDefaultPackages = true;

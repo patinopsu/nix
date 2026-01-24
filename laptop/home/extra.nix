@@ -34,8 +34,12 @@
     lolcat
     figlet
     usbutils
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
+    rar
   ]) ++ (with pkgs.kdePackages; [
     kio
+    kio-admin
     kio-extras
     breeze-icons
     dolphin-plugins
