@@ -8,12 +8,6 @@ in
   networking = {
     hostName = "fonddulac";
     wireless.enable = true;
-    nameservers = [
-      "45.90.28.0#${nextdnsHost}"
-      "45.90.30.0#${nextdnsHost}"
-      "2a07:a8c0::#${nextdnsHost}"
-      "2a07:a8c1::#${nextdnsHost}"
-    ];
     networkmanager = {
       enable = true;
       dhcp = "internal";
@@ -43,6 +37,14 @@ in
         "2620:fe::fe"
         "2620:fe::9"
       ];
+      settings.Resolve = {
+        DNS = ''
+          45.90.28.0#${nextdnsHost}
+          45.90.30.0#${nextdnsHost}
+          2a07:a8c0::#${nextdnsHost}
+          2a07:a8c1::#${nextdnsHost}
+        '';
+      };
     };
   };
 }
