@@ -20,7 +20,9 @@
 
       "exec-once" = [
         "${pkgs.vorbis-tools}/bin/ogg123 ${pkgs.kdePackages.oxygen-sounds}/share/sounds/oxygen/stereo/desktop-login-short.ogg &"
-        "noctalia-shell"
+        "noctalia-shell &"
+        "eww open nixsysinfo &"
+        "eww open confidential_warning &"
       ];
 
       general = {
