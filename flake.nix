@@ -16,6 +16,7 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     arkenfox.url = "github:dwarfmaster/arkenfox-nixos";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, hyprshell, nix-flatpak, ... }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
@@ -26,9 +27,7 @@
         ./hosts/t14gen1/boot.nix
         ./hosts/t14gen1/hardware.nix
         ./hosts/t14gen1/options.nix
-        inputs.stylix.nixosModules.stylix
         inputs.lanzaboote.nixosModules.lanzaboote
-        inputs.home-manager.nixosModules.home-manager
         nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen1
       ];
     };
@@ -40,8 +39,6 @@
         ./hosts/portland/options.nix
         ./hosts/portland/boot.nix
         ./hosts/portland/hardware.nix
-        inputs.stylix.nixosModules.stylix
-        inputs.home-manager.nixosModules.home-manager
       ];
     };
   };

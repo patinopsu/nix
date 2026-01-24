@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -10,10 +10,14 @@
     ./modules/power.nix
     ./modules/security.nix
     ./modules/bluetooth.nix
+    ./modules/flatpak.nix
     ./modules/packages.nix
     ./modules/audio.nix
     ./modules/printing.nix
     ./modules/vpn.nix
     ./modules/virtualization.nix
+    inputs.nix-flatpak.nixosModules.nix-flatpak  
+    inputs.stylix.nixosModules.stylix
+    inputs.home-manager.nixosModules.home-manager
   ];
 }
