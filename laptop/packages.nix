@@ -21,6 +21,7 @@
     distrobox
     swtpm
     gparted
+    cachix
     dnsmasq
     android-tools
     gpu-screen-recorder
