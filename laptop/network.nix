@@ -18,7 +18,7 @@ in
       };
     };
     firewall = {
-      enable =  true;
+      enable = true;
     };
   };
   services = {
