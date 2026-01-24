@@ -10,7 +10,7 @@
     udiskie.enable = true;
   };
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     bat
     s-tui
     lazygit
@@ -34,23 +34,24 @@
     lolcat
     figlet
     usbutils
-    kdePackages.kio
-    kdePackages.kio-extras
-    kdePackages.breeze-icons
-    kdePackages.dolphin-plugins
-    kdePackages.kdesdk-thumbnailers 
-    kdePackages.kdegraphics-thumbnailers 
-    kdePackages.kdegraphics-mobipocket 
-    kdePackages.kimageformats 
-    kdePackages.qtimageformats 
-    kdePackages.ffmpegthumbs 
-    kdePackages.taglib 
-    kdePackages.baloo 
-    kdePackages.baloo-widgets 
-    kdePackages.dolphin
-    kdePackages.ark
-    kdePackages.kate
-  ];
+  ]) ++ (with pkgs.kdePackages; [
+    kio
+    kio-extras
+    breeze-icons
+    dolphin-plugins
+    kdesdk-thumbnailers 
+    kdegraphics-thumbnailers 
+    kdegraphics-mobipocket 
+    kimageformats 
+    qtimageformats 
+    ffmpegthumbs 
+    taglib 
+    baloo 
+    baloo-widgets 
+    dolphin
+    ark
+    kate
+  ]);
 
   home.file."scripts" = {
     source = ../../src/scripts;
