@@ -22,6 +22,14 @@
     dnsmasq
     android-tools
     tldr
+    gdk-pixbuf
+    webp-pixbuf-loader
+    ffmpeg-headless
+    ffmpegthumbnailer
+    libheif.bin
+    libheif.out
+    libavif
+    libjxl
   ];
   fonts = {
     enableDefaultPackages = true;
