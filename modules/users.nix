@@ -25,11 +25,13 @@
         ./home/hypridle.nix
         ./home/hyprlock.nix
         ./home/fastfetch.nix
+        ./home/spicetify.nix
         ./home/extra.nix
         ./home/eww.nix
         inputs.arkenfox.hmModules.arkenfox
         inputs.noctalia.homeModules.default
         inputs.hyprshell.homeModules.hyprshell
+        inputs.spicetify-nix.homeManagerModules.spicetify
       ];
     };
   };

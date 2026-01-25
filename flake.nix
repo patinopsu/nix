@@ -17,6 +17,7 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     arkenfox.url = "github:dwarfmaster/arkenfox-nixos";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, hyprshell, nix-flatpak, ... }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
