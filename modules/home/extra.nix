@@ -10,7 +10,7 @@
     udiskie.enable = true;
   };
 
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; ([
     bat
     s-tui
     lazygit
@@ -41,12 +41,12 @@
     kio
     kio-admin
     kio-extras
-    breeze-icons
     dolphin-plugins
     kdesdk-thumbnailers 
     kdegraphics-thumbnailers 
     kdegraphics-mobipocket 
     kimageformats 
+    kservice
     qtimageformats 
     ffmpegthumbs 
     taglib 
