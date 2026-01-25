@@ -3,8 +3,6 @@
 {
   services = {
     udisks2.enable = true;
-    tumbler.enable = true;
-    
   };
   programs = {
     gpu-screen-recorder.enable = true;
