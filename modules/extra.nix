@@ -9,6 +9,10 @@
     "/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 
+  environment.pathsToLink = [
+    "share/thumbnailers"
+  ];
+
   nix = {
     optimise.automatic = true;
     settings = {
