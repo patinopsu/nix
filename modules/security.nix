@@ -16,6 +16,15 @@
       '';
     };
   };
+  programs.firejail = {
+    enable = true;
+    wrappedBinaries = {
+      firefox = {
+        executable = "${pkgs.firefox}/bin/firefox";
+        profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+      };
+    };
+  };
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "GMOME Authentication Agent";
