@@ -209,12 +209,22 @@
       ];
 
       windowrule = [
-        "match:class org.freedesktop.impl.portal.desktop.kde, float on"
-        "match:class udiskie, float on"
         {
           "name" = "Firefox Picture-in-Picture";
           "match:class" = "firefox";
           "match:title" = "Picture-in-Picture";
+
+          "float" = "on";
+        }
+        {
+          "name" = "Float KDE Desktop Portal";
+          "match:class" = "org.freedesktop.impl.portal.desktop.kde"
+
+          "float" = "on";
+        }
+        {
+          "name" = "Float udiskie daemon";
+          "match:class" = "udiskie";
 
           "float" = "on";
         }
