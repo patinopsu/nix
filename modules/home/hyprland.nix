@@ -197,7 +197,6 @@
 
         ",XF86WLAN, exec, noctalia-shell ipc call wifi toggle"
         ",XF86NotificationCenter, exec, noctalia-shell ipc call notifications toggleHistory"
-        ",XF86Display, exec, notify-send -a \"System\" \"Have you considered trying to match wits with a rutabaga?\""
 
         ",XF86Favorites, exec, noctalia-shell ipc call launcher toggle"
         ",XF86PickupPhone, exec, $terminal"
