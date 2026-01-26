@@ -15,7 +15,7 @@
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "noctalia-shell ipc call launcher toggle";
-      "$browser" = "google-chrome-stable";
+      "$browser" = "firefox";
       "$mainMod" = "SUPER";
 
       "exec-once" = [
