@@ -180,6 +180,7 @@
         ", PRINT, exec, ~/scripts/screenshots.sh full"
         "Alt, PRINT, exec, ~/scripts/screenshots.sh window"
         "Ctrl, PRINT, exec, ~/scripts/screenshots.sh region"
+        "Ctrl Alt, Delete, exec, noctalia-shell ipc call sessionMenu toggle"
       ];
 
       bindl = [
