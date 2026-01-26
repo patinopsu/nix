@@ -219,7 +219,7 @@
         }
         {
           "name" = "Float KDE Desktop Portal";
-          "match:class" = "org.freedesktop.impl.portal.desktop.kde"
+          "match:class" = "org.freedesktop.impl.portal.desktop.kde";
 
           "float" = "on";
         }
