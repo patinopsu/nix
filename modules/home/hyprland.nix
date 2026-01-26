@@ -211,6 +211,13 @@
       windowrule = [
         "match:class org.freedesktop.impl.portal.desktop.kde, float on"
         "match:class udiskie, float on"
+        {
+          "name" = "Firefox Picture-in-Picture";
+          "match:class" = "firefox";
+          "match:title" = "Picture-in-Picture";
+
+          "float" = "on";
+        }
       ];
     };
     plugins = [
