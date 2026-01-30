@@ -8,7 +8,7 @@
     networking = {
       wg-quick.interfaces = {
         proton-th22 = {
-          autostart = true;
+          autostart = false;
           configFile = "/etc/wireguard/proton-th22.conf";
         };
       };

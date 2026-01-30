@@ -150,10 +150,10 @@
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
 
-        "$mainMod SHIFT, left, movewindow, l"
-        "$mainMod SHIFT, up, movewindow, u"
-        "$mainMod SHIFT, down, movewindow, d"
-        "$mainMod SHIFT, right, movewindow, r"
+        "$mainMod Ctrl, W, movewindow, u"
+        "$mainMod Ctrl, A, movewindow, l"
+        "$mainMod Ctrl, S, movewindow, d"
+        "$mainMod Ctrl, D, movewindow, r"
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -173,8 +173,8 @@
         "bind = $mainMod, Z, layoutmsg, move -col"
         "bind = $mainMod SHIFT, X, layoutmsg, movewindowto r"
         "bind = $mainMod SHIFT, Z, layoutmsg, movewindowto l"
-        "bind = $mainMod SHIFT, up, layoutmsg, movewindowto u"
-        "bind = $mainMod SHIFT, down, layoutmsg, movewindowto d"
+        "bind = $mainMod SHIFT, W, layoutmsg, movewindowto u"
+        "bind = $mainMod SHIFT, S, layoutmsg, movewindowto d"
         "bind = $mainMod SHIFT, A, layoutmsg, promote"
 
         ", PRINT, exec, ~/scripts/screenshots.sh full"
@@ -226,6 +226,13 @@
         {
           "name" = "Float udiskie daemon";
           "match:class" = "udiskie";
+
+          "float" = "on";
+        }
+        {
+          "name" = "Float Hyprland Screenshare";
+          "match:initial_title" = "^(Select what to share)$";
+          "match:class" = "^$";
 
           "float" = "on";
         }

@@ -35,6 +35,7 @@
     figlet
     usbutils
     gpu-screen-recorder
+    quickshell
     gpu-screen-recorder-gtk
     rar
   ]) ++ (with pkgs.kdePackages; [
