@@ -13,21 +13,18 @@
     lanzaboote = lib.mkForce {
       enable = true;
       pkiBundle = "/var/lib/sbctl";
+      autoGenerateKeys = {
+        enable = true;
+      };
     };
     plymouth = {
       enable = true;
     };
-    initrd = {
-      systemd = {
-        enable = true;
-      };
-    };
-    resumeDevice = "/dev/mapper/nix";
+    #resumeDevice = "/dev/mapper/nix";
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "quiet"
-      "splash"
-      "resume_offset=8709017"
+      #"resume_offset=8709017"
     ];
   };
 

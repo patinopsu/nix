@@ -1,11 +1,6 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  hardware = {
-    bluetooth = {
-      enable = true;
-    };
-  };
   services = {
     pipewire = {
       enable = true;

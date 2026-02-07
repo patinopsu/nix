@@ -2,22 +2,21 @@
 
 {
   imports = [
-    ./modules/gui.nix
+    ./modules/audio.nix
+    ./modules/bluetooth.nix
+    ./modules/extra.nix
+    ./modules/flatpak.nix
     ./modules/network.nix
+    ./modules/packages.nix
+    ./modules/plasma.nix
+    ./modules/power.nix
+    ./modules/printing.nix
+    ./modules/security.nix
     ./modules/theming.nix
     ./modules/users.nix
-    ./modules/extra.nix
-    ./modules/power.nix
-    ./modules/security.nix
-    ./modules/bluetooth.nix
-    ./modules/flatpak.nix
-    ./modules/packages.nix
-    ./modules/audio.nix
-    ./modules/printing.nix
-    ./modules/vpn.nix
     ./modules/virtualization.nix
-    inputs.nix-flatpak.nixosModules.nix-flatpak  
     inputs.stylix.nixosModules.stylix
+    inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.home-manager.nixosModules.home-manager
   ];
 }

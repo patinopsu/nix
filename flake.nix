@@ -20,7 +20,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, lanzaboote, stylix, arkenfox, hyprshell, nix-flatpak, ... }: {
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.t14gen1 = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
