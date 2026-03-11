@@ -13,7 +13,7 @@
 
       "$terminal" = "kitty";
       "$fileManager" = "kitty yazi";
-      "$menu" = "noctalia-shell ipc call launcher toggle";
+      "$menu" = "vicinae toggle";
       "$browser" = "brave";
       "$mainMod" = "SUPER";
 
@@ -52,6 +52,7 @@
       };
 
       misc = {
+        focus_on_activate = true;
         disable_watchdog_warning = true;
         vfr = false;
         vrr = 3;
@@ -208,6 +209,17 @@
           ignore_alpha = 0.5;
           blur = true;
           blur_popups = true;
+        }
+        {
+          name = "vicinae-blur";
+          "match:namespace" = "vicinae";
+          blur = true;
+          ignore_alpha = 0;
+        }
+        {
+          name = "vicinae-no-animation";
+          "match:namespace" = "vicinae";
+          no_anim = true;
         }
       ];
     };
