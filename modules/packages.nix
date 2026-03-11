@@ -30,6 +30,9 @@
   ];
   fonts = {
     enableDefaultPackages = true;
+    fontconfig = {
+      antialias = true;
+    };
     packages = with pkgs; [
       nerd-fonts.caskaydia-cove
     ];

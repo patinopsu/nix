@@ -1,19 +1,30 @@
-{ config, lib, pkgs, ... }:
+{inputs, pkgs, ...}:
 
 {
-  services = {
-    desktopManager.plasma6.enable = true;
-    displayManager.plasma-login-manager.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      animation = "colormix";
+      bigclock = "en";
+      brightness_down_key = "";
+      brightness_up_key = "";
+      clock = "%c";
+      edge_margin = "1";
+    };
   };
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    khelpcenter
-    kde-gtk-config
-    plasma-systemmonitor
+  systemd.services.display-manager.environment.XDG_CURRENT_DESKTOP = "X-NIXOS-SYSTEMD-AWARE";
+  programs.hyprland = {
+    enable = true;
+    withUWSM  = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+  environment.systemPackages = with pkgs.kdePackages; [
+    kio
+    kio-fuse
+    kio-extras
+    qtsvg
+    dolphin
   ];
-  environment.systemPackages = (with pkgs.kdePackages; [
-    qtmultimedia
-  ]) ++ ( with pkgs; [
-    klassy
-    plasma-panel-colorizer
-  ]);
+  services.udisks2.enable = true;
 }

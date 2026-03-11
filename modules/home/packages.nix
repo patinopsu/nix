@@ -25,5 +25,9 @@
     libnatpmp
     pciutils
     tldr
+    yazi
+    grim
+    slurp
+    jq
   ];
 }
