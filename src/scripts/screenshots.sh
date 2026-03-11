@@ -14,7 +14,7 @@ FILEPATH="$DIR/$FILENAME"
 MODE="$1"
 
 notify() {
-  notify-send -a "Screenshots" "Screenshot Taken" "$FILEPATH"
+    noctalia-shell ipc call toast send "{\"title\": \"Screenshots\", \"body\": \"Screenshot saved to $FILEPATH\", \"icon\": \"camera\", \"duration\": \"6000\"}"
 }
 
 copy_clipboard() {
