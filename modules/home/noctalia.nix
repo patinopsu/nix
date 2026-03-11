@@ -217,17 +217,7 @@
       };
 
       dock = {
-        animationSpeed = 1;
-        colorizeIcons = false;
-        deadOpacity = 0.6; # Updated from 0.44
-        displayMode = "auto_hide"; # Updated from "always_visible"
-        enabled = true; # Updated from false
-        floatingRatio = 0; # Updated from 0.54
-        inactiveIndicators = true;
-        monitors = [];
-        onlySameOutput = true;
-        pinnedStatic = true; # Updated from false
-        size = 1; # Updated from 0.93
+        enable = false;
       };
 
       general = {
@@ -415,6 +405,20 @@
         favorites = [
 
         ];
+      };
+      idle = {
+        enabled = true;
+        screenOffTimeout = 0;
+        lockTimeout = 300;
+        suspendTimeout = 1800;
+        fadeDuration = 5;
+        screenOffCommand = "";
+        lockCommand = "";
+        suspendCommand = "";
+        resumeScreenOffCommand = "";
+        resumeLockCommand = "";
+        resumeSuspendCommand = "";
+        customCommands = "[]";
       };
     };
     plugins = {
