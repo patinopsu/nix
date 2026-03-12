@@ -8,6 +8,7 @@
     ./git.nix
     ./hmcfg.nix
     ./hyprland.nix
+    ./hyprshell.nix
     ./kitty.nix
     ./noctalia.nix
     ./packages.nix
@@ -21,8 +22,10 @@
     # Variables
     ../vars/default.nix
 
+    # Home Manager Modules
     inputs.vicinae.homeManagerModules.default
     inputs.spicetify-nix.homeManagerModules.spicetify
     inputs.noctalia.homeModules.default
+    inputs.hyprshell.homeModules.hyprshell
   ];
 }

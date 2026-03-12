@@ -28,8 +28,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vicinae.url = "github:vicinaehq/vicinae";
+    hyprshell = {
+      url = "github:H3rmt/hyprshell?ref=hyprshell-release";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, vicinae, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, vicinae, hyprshell, ... }: {
     nixosConfigurations.workstation = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit self inputs; };
