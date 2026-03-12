@@ -19,8 +19,8 @@
     withUWSM  = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
-  environment.systemPackages = with pkgs; [
-    nautilus
+  environment.systemPackages = with pkgs.kdePackages; [
+    dolphin
   ];
   services = {
     gvfs.enable = true;
